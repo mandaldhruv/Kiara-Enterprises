@@ -1,52 +1,93 @@
 # Kiara Enterprises - Premium Real Estate Portfolio 🏢✨
 
-A modern, high-conversion, single-page website built for **Kiara Enterprises**, a premier real estate agency based in Vasai East, Palghar. Designed with a sophisticated "Executive Dark" theme, it caters to high-net-worth individuals, corporate clients, and NRIs seeking residential, commercial, and industrial properties.
+A modern, high-conversion, single-page website built for **Kiara Enterprises**, a premier real estate agency based in Vasai-Palghar. Designed with a sophisticated "Executive Dark" theme, it caters to high-net-worth individuals, corporate clients, and NRIs seeking residential, commercial, and industrial properties.
+
+![HTML5](https://img.shields.io/badge/html5-%23E34F26.svg?style=for-the-badge&logo=html5&logoColor=white)
+![TailwindCSS](https://img.shields.io/badge/tailwindcss-%2338B2AC.svg?style=for-the-badge&logo=tailwind-css&logoColor=white)
+![JavaScript](https://img.shields.io/badge/javascript-%23323330.svg?style=for-the-badge&logo=javascript&logoColor=%23F7DF1E)
+![Google Apps Script](https://img.shields.io/badge/Google%20Apps%20Script-4285F4?style=for-the-badge&logo=google&logoColor=white)
 
 ## 🌟 Key Features
 
-* **Premium UI/UX:** "Executive Dark" aesthetic utilizing Deep Charcoal backgrounds with Matte Gold (`#eccb13`) accents.
-* **Parallax Hero Section:** Smooth, immersive background scrolling effect on the hero image.
-* **Dynamic Scroll-Spy Navigation:** The navbar automatically updates to highlight the currently viewed section (Home, About, Projects, Services, Contact) and stays persistently highlighted.
-* **Intersection Observer Animations:** An animated counter (`0` to `2021`, `50+`, `500+`) that triggers only when the user scrolls the Stats Strip into view.
-* **Interactive Budget Slider:** A real-time JavaScript-powered range slider that updates Indian real estate pricing formats (e.g., ₹20L to ₹5Cr+) as the user drags the handle.
-* **Working Contact Form:** Fully functional frontend form integrated with [FormSubmit](https://formsubmit.co/), sending leads directly to the configured email without needing a backend server.
+* **Direct Google Sheets Lead Generation:** Both the main contact form and the popup inquiry form submit leads *directly* to a Google Sheet using an AJAX `fetch` API. It features a seamless "Sending..." state and an inline success message without jarring page reloads or alerts.
+* **Dynamic Property Filtering:** Users can filter the "Curated Properties" section by categories (All, Apartments, Villas, Commercial) instantly using vanilla JavaScript.
+* **Quick Inquiry Modal:** Clicking "Schedule Visit" or any specific property card opens a centered, blurred-background inquiry modal that automatically captures the property the user clicked on.
+* **Scroll-Spy Navigation:** The fixed navbar automatically highlights the currently viewed section as the user scrolls down the page.
+* **Intersection Observer Animations:** An animated stats counter (`0` to `2021`, `50+`, `500+`) triggers precisely when the user scrolls the "About" section into view.
 * **Floating WhatsApp Integration:** A pulsing WhatsApp Floating Action Button (FAB) that opens the user's app with a pre-filled, URL-encoded inquiry message.
+* **Parallax Hero Section:** Smooth, immersive background scrolling effect on the hero image.
 * **Custom Map Experience:** A sleek, grayscale Google Maps iframe wrapped in an interactive overlay that redirects users to Google Maps for exact directions on click.
-* **Fully Responsive:** Mobile-first design leveraging Tailwind CSS container queries and flexbox/grid layouts.
+* **Fully Responsive:** Mobile-first design leveraging Tailwind CSS container queries, ensuring perfect scaling from mobile phones to 4K desktops.
 
 ## 🛠️ Technologies Used
 
 * **HTML5:** Semantic and accessible structure.
-* **Tailwind CSS (via CDN):** Rapid, utility-first styling with custom theme configuration in the `<head>`.
-* **Vanilla JavaScript:** Lightweight DOM manipulation for the mobile menu, scroll spy, dynamic slider, parallax, and counter animations (No heavy frameworks like React/jQuery).
-* **Google Fonts:** *Playfair Display* (elegant serif for headings) and *Inter* (clean sans-serif for body text).
-* **Google Material Symbols:** Scalable, lightweight vector icons.
+* **Tailwind CSS (via CDN):** Rapid, utility-first styling with a custom configuration inside the `<head>` for specific brand colors (Matte Gold `#eccb13` and Deep Charcoal `#121212`).
+* **Vanilla JavaScript:** Lightweight DOM manipulation for the mobile menu, scroll spy, filtering, modal logic, and AJAX form submissions. No heavy frameworks required.
+* **Google Apps Script:** Acts as the backend API to parse POST requests from the website and append them as rows in a Google Sheet.
+* **Google Fonts & Material Symbols:** *Playfair Display* (elegant serif), *Inter* (clean sans-serif), and scalable vector icons.
 
 ## 🚀 Setup & Installation
 
-Because this project uses the Tailwind CSS CDN and Vanilla JS, there is no build process or `npm install` required!
+Because this project uses the Tailwind CSS CDN and Vanilla JavaScript, there is no build process or `npm install` required!
 
-1.  **Clone or Download** the repository.
-2.  Open the project folder.
-3.  Double-click `index.html` to open it in your default web browser.
+1. **Clone the repository:**
+   ```bash
+   git clone [https://github.com/mandaldhruv/Kiara-Enterprises.git](https://github.com/mandaldhruv/Kiara-Enterprises.git)
+Open the project folder.
 
-## ⚙️ Configuration & Customization
+Run the site: Double-click index.html to open it in your default web browser, or use a tool like VS Code Live Server.
 
-If you need to update business details in the future, here is where to look in the `index.html` code:
+⚙️ Google Sheets Backend Configuration
+This website is hardcoded to send leads to a Google Sheet. If you ever need to recreate or modify the backend, here is how the data maps:
 
-* **Email Forwarding (FormSubmit):**
-    Locate the `<form action="https://formsubmit.co/YOUR_EMAIL_HERE" ...>` tag in the Contact section and replace the email with your desired receiving address. *(Note: You will need to confirm the email address once via FormSubmit on the very first submission).*
-* **WhatsApp Number & Message:**
-    Locate the floating `<a>` tag at the bottom of the HTML (`<a href="https://wa.me/917977651751?text=..." ...>`). Change the phone number (keep the country code) or alter the URL-encoded text.
-* **Direct Call Button:**
-    Locate the "Contact Us" button in the Hero section (`href="tel:+917977651751"`) to update the phone dialer link.
-* **Google Maps Link:**
-    Locate the map container in the Contact section and update the `href` on the overlay `<a>` tag to your specific Google Maps share link.
+The HTML forms use the following name attributes, which must be handled by your Code.gs Google Apps Script:
 
-## 📁 File Structure
+interest (Buying, Renting, etc.)
 
-```text
-├── index.html       # The main single-page application containing all HTML, Tailwind config, and JS scripts
+property_type (Apartment, Villa, etc.)
+
+name (Full Name)
+
+phone (Phone Number)
+
+message (Optional Message)
+
+Inquired_Property (Hidden field capturing the specific property clicked via the modal)
+
+Sample Google Apps Script (Code.gs):
+
+JavaScript
+function doPost(e) {
+  try {
+    var doc = SpreadsheetApp.getActiveSpreadsheet();
+    var sheet = doc.getActiveSheet();
+    var rowData = [];
+    
+    // Push the data exactly matching the HTML form names
+    rowData.push(new Date());                                     
+    rowData.push(e.parameter.interest || "N/A");                  
+    rowData.push(e.parameter.property_type || "N/A");             
+    rowData.push(e.parameter.name || "N/A");                      
+    rowData.push(e.parameter.phone || "N/A");                     
+    rowData.push(e.parameter.message || "N/A");                   
+    rowData.push(e.parameter.Inquired_Property || "General");     
+
+    sheet.appendRow(rowData);
+    
+    return ContentService
+      .createTextOutput(JSON.stringify({ "result": "success" }))
+      .setMimeType(ContentService.MimeType.JSON);
+      
+  } catch(error) {
+    return ContentService
+      .createTextOutput(JSON.stringify({ "result": "error", "error": error.message }))
+      .setMimeType(ContentService.MimeType.JSON);
+  }
+}
+📁 File Structure
+Plaintext
+├── index.html       # Main single-page application (HTML, Tailwind config, JS)
 └── README.md        # Project documentation
 📝 License
-© 2026 Kiara Enterprises. All rights reserved. Design and code strictly for the Kiara Enterprises brand.
+© 2026 Kiara Enterprises. All rights reserved.
