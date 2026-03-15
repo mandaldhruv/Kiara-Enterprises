@@ -6,10 +6,11 @@ A modern, high-conversion website built for **Kiara Enterprises**, a premier rea
 ![TailwindCSS](https://img.shields.io/badge/tailwindcss-%2338B2AC.svg?style=for-the-badge&logo=tailwind-css&logoColor=white)
 ![JavaScript](https://img.shields.io/badge/javascript-%23323330.svg?style=for-the-badge&logo=javascript&logoColor=%23F7DF1E)
 ![Google Apps Script](https://img.shields.io/badge/Google%20Apps%20Script-4285F4?style=for-the-badge&logo=google&logoColor=white)
+![Firebase](https://img.shields.io/badge/firebase-%23039BE5.svg?style=for-the-badge&logo=firebase)
 ![License](https://img.shields.io/badge/License-Proprietary-red.svg?style=for-the-badge)
 
 ## 🌐 Live Demo
-*(Add your live hosting link here once deployed via GitHub Pages, Firebase, or Vercel, e.g., `https://kiaraenterprises.com`)*
+Experience the live production site here: **[kiaraenterprises.com](https://kiaraenterprises.com)**
 
 ---
 
@@ -28,21 +29,24 @@ A modern, high-conversion website built for **Kiara Enterprises**, a premier rea
 
 * **Frontend:** HTML5, Tailwind CSS (via CDN for rapid utility-first styling).
 * **Logic:** Vanilla JavaScript (ES6+). No heavy frontend frameworks required, ensuring lightning-fast load times.
-* **Backend Integration:** Google Apps Script (`Code.gs`) acts as a serverless backend API to parse `POST` requests and append them as new rows in a private Google Sheet.
+* **Database / API:** Google Apps Script (`Code.gs`) acts as a serverless backend API to parse `POST` requests and append them as new rows in a private Google Sheet.
+* **Hosting & Deployment:** Firebase Hosting, configured with clean URLs and mapped to a custom domain.
 * **Typography & Iconography:** *Playfair Display* (serif), *Inter* (sans-serif), and Google Material Symbols.
 
-## 🚀 Setup & Local Development
+## 🚀 Local Development & Deployment
 
-Because this project relies on Tailwind CSS CDN and Vanilla JavaScript, there is no heavy build process or `npm install` required.
+Because this project relies on Tailwind CSS CDN and Vanilla JavaScript, local development requires no build tools.
 
 1. **Clone the repository:**
    ```bash
    git clone [https://github.com/mandaldhruv/Kiara-Enterprises.git](https://github.com/mandaldhruv/Kiara-Enterprises.git)
-Navigate to the directory:
+2. Navigate to the `public/` directory and open `index.html` in your browser (or use VS Code Live Server).
 
-Bash
-cd Kiara-Enterprises/public
-Run the site: Open index.html in your default web browser, or use a tool like the VS Code Live Server extension for hot-reloading during development.
+**Firebase Deployment:**
+To push updates to the live custom domain, ensure you have the Firebase CLI installed:
+```bash
+firebase deploy --only hosting
+
 
 ⚙️ Google Sheets Backend Configuration
 The HTML forms use specific name attributes mapped to a Google Apps Script. To recreate the backend, use the following Code.gs structure:
@@ -75,15 +79,20 @@ function doPost(e) {
       .setMimeType(ContentService.MimeType.JSON);
   }
 }
+
 📁 File Structure
-Plaintext
+KiaraEnterprises/
 ├── public/
+│   ├── kiara-logo/           # Brand assets (logo, favicon)
 │   ├── index.html            # Main single-page application
 │   ├── privacy.html          # Privacy Policy page
-│   ├── terms.html            # Terms of Service page
-│   └── kiara-logo/           # Brand assets (logo, favicon)
+│   └── terms.html            # Terms of Service page
+├── .firebaserc               # Firebase project target
+├── .gitignore                # Git exclusion rules (cache/logs)
+├── firebase.json             # Firebase hosting configuration
 ├── LICENSE                   # Proprietary Legal License
 └── README.md                 # Project documentation
+
 ⚖️ License
 © 2026 Dhruv Mandal / Kiara Enterprises. All Rights Reserved.
 
