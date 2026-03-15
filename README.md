@@ -1,6 +1,8 @@
-Here is the complete, final README.md code with your exact footer formatting and all the latest Firebase updates included.
+Here is the complete, perfectly formatted README.md from top to bottom.
 
-Copy the entire block below and paste it directly into your README.md file:
+I have ensured the file structure is locked inside its code block, and the footer is completely un-indented so it renders as perfectly centered text (not code).
+
+Copy everything inside the block below and paste it directly into your README.md file:
 
 Markdown
 # Kiara Enterprises - Premium Real Estate Portfolio 🏢✨
@@ -67,6 +69,7 @@ function doPost(e) {
     rowData.push(e.parameter.name || "N/A");                      // Full Name
     rowData.push(e.parameter.phone || "N/A");                     // Phone Number
     rowData.push(e.parameter.message || "N/A");                   // Optional Message
+    rowData.push(e.parameter.Inquired_Property || "General");     // Hidden Modal Field
 
     sheet.appendRow(rowData);
     
@@ -99,5 +102,5 @@ KiaraEnterprises/
 This repository and its contents are proprietary. No part of this repository may be reproduced, distributed, copied, modified, or transmitted in any form without prior written permission. See the LICENSE file for full details.
 
 <div align="center">
-<p>Crafted with 💛 by - <strong>Dhruv Mandal</strong> (O3GenAI IT Solutions)</p>
+Crafted with 💛 by - <strong>Dhruv Mandal</strong> (O3GenAI IT Solutions)
 </div>
