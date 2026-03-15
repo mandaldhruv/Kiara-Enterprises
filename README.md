@@ -45,10 +45,10 @@ Because this project relies on Tailwind CSS CDN and Vanilla JavaScript, local de
 To push updates to the live custom domain, ensure you have the Firebase CLI installed:
 ```bash
 firebase deploy --only hosting
-
 ⚙️ Google Sheets Backend Configuration
 The HTML forms use specific name attributes mapped to a Google Apps Script. To recreate the backend, use the following Code.gs structure:
 
+JavaScript
 function doPost(e) {
   try {
     var doc = SpreadsheetApp.getActiveSpreadsheet();
@@ -76,9 +76,9 @@ function doPost(e) {
       .setMimeType(ContentService.MimeType.JSON);
   }
 }
+## 📁 File Structure
 
-📁 File Structure
-
+```text
 KiaraEnterprises/
 ├── public/
 │   ├── kiara-logo/           # Brand assets (logo, favicon)
@@ -93,6 +93,9 @@ KiaraEnterprises/
 
 ⚖️ License
 © 2026 Dhruv Mandal / Kiara Enterprises. All Rights Reserved.
-This repository and its contents are proprietary. No part of this repository may be reproduced, distributed, copied, modified, or transmitted in any form without prior written permission. See the LICENSE file for full details.
-<p align="center">Crafted with 💛 by - <strong>Dhruv Mandal</strong> (O3GenAI IT Solutions)</p>
 
+This repository and its contents are proprietary. No part of this repository may be reproduced, distributed, copied, modified, or transmitted in any form without prior written permission. See the LICENSE file for full details.
+
+<div align="center">
+<p>Crafted with 💛 by - <strong>Dhruv Mandal</strong></p>
+</div>
