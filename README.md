@@ -62,7 +62,6 @@ function doPost(e) {
     rowData.push(e.parameter.name || "N/A");                      // Full Name
     rowData.push(e.parameter.phone || "N/A");                     // Phone Number
     rowData.push(e.parameter.message || "N/A");                   // Optional Message
-    rowData.push(e.parameter.Inquired_Property || "General");     // Hidden Modal Field
 
     sheet.appendRow(rowData);
     
