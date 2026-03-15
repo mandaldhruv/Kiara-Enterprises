@@ -70,7 +70,6 @@ function doPost(e) {
     rowData.push(e.parameter.name || "N/A");                      
     rowData.push(e.parameter.phone || "N/A");                     
     rowData.push(e.parameter.message || "N/A");                   
-    rowData.push(e.parameter.Inquired_Property || "General");     
 
     sheet.appendRow(rowData);
     
