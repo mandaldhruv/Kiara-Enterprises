@@ -56,7 +56,7 @@ Because this project relies on Tailwind CSS CDN and Vanilla JavaScript, local de
 1. Clone the repository:
 
 ```bash
-git clone https://github.com/mandaldhruv/Kiara-Enterprises.git
+git clone https://github.com/mandaldhruv/Kiara-Enterprises.git ```
 
 Navigate to the public/ directory and open index.html in your browser
 (or use VS Code Live Server).
@@ -70,7 +70,7 @@ firebase deploy --only hosting
 
 The HTML forms use specific name attributes mapped to a Google Apps Script.
 To recreate the backend, use the following Code.gs structure:
-
+```bash
 function doPost(e) {
   try {
     var doc = SpreadsheetApp.getActiveSpreadsheet();
@@ -84,7 +84,6 @@ function doPost(e) {
     rowData.push(e.parameter.name || "N/A");                      // Full Name
     rowData.push(e.parameter.phone || "N/A");                     // Phone Number
     rowData.push(e.parameter.message || "N/A");                   // Optional Message
-    rowData.push(e.parameter.Inquired_Property || "General");     // Hidden Modal Field
 
     sheet.appendRow(rowData);
     
@@ -97,8 +96,10 @@ function doPost(e) {
       .createTextOutput(JSON.stringify({ "result": "error", "error": error.message }))
       .setMimeType(ContentService.MimeType.JSON);
   }
-}
+} ```
+
 📁 File Structure
+```bash
 KiaraEnterprises/
 ├── public/
 │   ├── kiara-logo/           # Brand assets (logo, favicon)
@@ -109,7 +110,8 @@ KiaraEnterprises/
 ├── .gitignore                # Git exclusion rules (cache/logs)
 ├── firebase.json             # Firebase hosting configuration
 ├── LICENSE                   # Proprietary Legal License
-└── README.md                 # Project documentation
+└── README.md                 # Project documentation ```
+
 ⚖️ License
 
 © 2026 Dhruv Mandal / Kiara Enterprises. All Rights Reserved.
@@ -119,4 +121,6 @@ No part of this repository may be reproduced, distributed, copied, modified, or 
 
 See the LICENSE file for full details.
 
-<p align="center"> Crafted with 💛 by - <strong>Dhruv Mandal</strong> (O3GenAI IT Solutions) </p> ```
+<p align="center"> Crafted with 💛 by - <strong>Dhruv Mandal</strong> (O3GenAI IT Solutions) </p> 
+
+
