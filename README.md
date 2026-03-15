@@ -41,7 +41,9 @@ Because this project relies on Tailwind CSS CDN and Vanilla JavaScript, local de
    ```bash
    git clone [https://github.com/mandaldhruv/Kiara-Enterprises.git](https://github.com/mandaldhruv/Kiara-Enterprises.git)
 2. Navigate to the `public/` directory and open `index.html` in your browser (or use VS Code Live Server).
-
+**Firebase Deployment:**
+To push updates to the live custom domain, ensure you have the Firebase CLI installed:
+``` firebase deploy --only hosting ```
 
 ⚙️ Google Sheets Backend Configuration
 The HTML forms use specific name attributes mapped to a Google Apps Script. To recreate the backend, use the following Code.gs structure:
