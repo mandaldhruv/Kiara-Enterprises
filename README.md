@@ -47,7 +47,8 @@ To push updates to the live custom domain, ensure you have the Firebase CLI inst
 ⚙️ Google Sheets Backend Configuration
 The HTML forms use specific name attributes mapped to a Google Apps Script. To recreate the backend, use the following Code.gs structure:
 
-JavaScript
+JavaScript code :
+```
 function doPost(e) {
   try {
     var doc = SpreadsheetApp.getActiveSpreadsheet();
@@ -75,8 +76,9 @@ function doPost(e) {
       .setMimeType(ContentService.MimeType.JSON);
   }
 }
+```
 📁 File Structure
-Plaintext
+```
 KiaraEnterprises/
 ├── public/
 │   ├── kiara-logo/           # Brand assets (logo, favicon)
@@ -88,6 +90,7 @@ KiaraEnterprises/
 ├── firebase.json             # Firebase hosting configuration
 ├── LICENSE                   # Proprietary Legal License
 └── README.md                 # Project documentation
+```
 ⚖️ License
 © 2026 Dhruv Mandal / Kiara Enterprises. All Rights Reserved.
 
