@@ -93,4 +93,6 @@ KiaraEnterprises/
 
 This repository and its contents are proprietary. No part of this repository may be reproduced, distributed, copied, modified, or transmitted in any form without prior written permission. See the LICENSE file for full details.
 
-<p align="center">Crafted with 💛 by - <strong>Dhruv Mandal</strong> (O3GenAI IT Solutions)</p>
+<div align="center">
+<p>Crafted with 💛 by - <strong>Dhruv Mandal</strong> (O3GenAI IT Solutions)</p>
+</div>
