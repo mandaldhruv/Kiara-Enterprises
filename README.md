@@ -76,9 +76,8 @@ function doPost(e) {
       .setMimeType(ContentService.MimeType.JSON);
   }
 }
-## 📁 File Structure
-
-```text
+📁 File Structure
+Plaintext
 KiaraEnterprises/
 ├── public/
 │   ├── kiara-logo/           # Brand assets (logo, favicon)
@@ -90,7 +89,6 @@ KiaraEnterprises/
 ├── firebase.json             # Firebase hosting configuration
 ├── LICENSE                   # Proprietary Legal License
 └── README.md                 # Project documentation
-
 ⚖️ License
 © 2026 Dhruv Mandal / Kiara Enterprises. All Rights Reserved.
 
