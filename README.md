@@ -62,7 +62,6 @@ function doPost(e) {
     rowData.push(e.parameter.name || "N/A");                      // Full Name
     rowData.push(e.parameter.phone || "N/A");                     // Phone Number
     rowData.push(e.parameter.message || "N/A");                   // Optional Message
-    rowData.push(e.parameter.Inquired_Property || "General");     // Hidden Modal Field
 
     sheet.appendRow(rowData);
     
@@ -97,5 +96,5 @@ KiaraEnterprises/
 This repository and its contents are proprietary. No part of this repository may be reproduced, distributed, copied, modified, or transmitted in any form without prior written permission. See the LICENSE file for full details.
 
 <div align="center">
-<p>Crafted with 💛 by - <strong>Dhruv Mandal</strong></p>
+<p>Crafted with 💛 by - <strong>Dhruv Mandal</strong> (O3GenAI IT Solutions)</p>
 </div>
