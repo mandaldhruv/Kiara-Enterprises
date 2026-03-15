@@ -1,3 +1,8 @@
+Here is the complete, final README.md code with your exact footer formatting and all the latest Firebase updates included.
+
+Copy the entire block below and paste it directly into your README.md file:
+
+Markdown
 # Kiara Enterprises - Premium Real Estate Portfolio 🏢✨
 
 A modern, high-conversion website built for **Kiara Enterprises**, a premier real estate agency based in Vasai-Palghar, Maharashtra. Designed with a sophisticated "Executive Dark" theme, it caters to high-net-worth individuals, corporate clients, and NRIs seeking residential, commercial, and industrial properties.
@@ -93,8 +98,6 @@ KiaraEnterprises/
 
 This repository and its contents are proprietary. No part of this repository may be reproduced, distributed, copied, modified, or transmitted in any form without prior written permission. See the LICENSE file for full details.
 
----
-
 <div align="center">
-  <p>Crafted with 💛 by - <strong>Dhruv Mandal</strong> (O3GenAI IT Solutions)</p>
+<p>Crafted with 💛 by - <strong>Dhruv Mandal</strong> (O3GenAI IT Solutions)</p>
 </div>
