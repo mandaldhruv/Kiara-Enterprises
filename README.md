@@ -43,7 +43,7 @@ Because this project relies on Tailwind CSS CDN and Vanilla JavaScript, local de
 
 **Firebase Deployment:**
 To push updates to the live custom domain, ensure you have the Firebase CLI installed:
-```firebase deploy --only hosting ```
+```firebase deploy --only hosting```
 ⚙️ Google Sheets Backend Configuration
 The HTML forms use specific name attributes mapped to a Google Apps Script. To recreate the backend, use the following Code.gs structure:
 
@@ -94,5 +94,5 @@ KiaraEnterprises/
 This repository and its contents are proprietary. No part of this repository may be reproduced, distributed, copied, modified, or transmitted in any form without prior written permission. See the LICENSE file for full details.
 
 <div align="center">
-<p>Crafted with 💛 by - <strong>Dhruv Mandal</strong> (O3GenAI IT Solutions)</p>
+<p>Crafted with 💛 by - <strong>Dhruv Mandal</strong></p>
 </div>
