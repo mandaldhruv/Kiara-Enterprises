@@ -9,7 +9,7 @@ A modern, high-conversion website built for **Kiara Enterprises**, a premier rea
 ![License](https://img.shields.io/badge/License-Proprietary-red.svg?style=for-the-badge)
 
 ## 🌐 Live Demo
-*(Add your live hosting link here once deployed via GitHub Pages, Firebase, or Vercel, e.g., `https://kiaraenterprises.com`)*
+*https://kiara-enterprises.web.app/*
 
 ---
 
