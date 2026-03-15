@@ -1,10 +1,3 @@
-Here is the complete, perfectly formatted README.md from top to bottom.
-
-I have ensured the file structure is locked inside its code block, and the footer is completely un-indented so it renders as perfectly centered text (not code).
-
-Copy everything inside the block below and paste it directly into your README.md file:
-
-Markdown
 # Kiara Enterprises - Premium Real Estate Portfolio 🏢✨
 
 A modern, high-conversion website built for **Kiara Enterprises**, a premier real estate agency based in Vasai-Palghar, Maharashtra. Designed with a sophisticated "Executive Dark" theme, it caters to high-net-worth individuals, corporate clients, and NRIs seeking residential, commercial, and industrial properties.
@@ -52,10 +45,10 @@ Because this project relies on Tailwind CSS CDN and Vanilla JavaScript, local de
 To push updates to the live custom domain, ensure you have the Firebase CLI installed:
 ```bash
 firebase deploy --only hosting
+
 ⚙️ Google Sheets Backend Configuration
 The HTML forms use specific name attributes mapped to a Google Apps Script. To recreate the backend, use the following Code.gs structure:
 
-JavaScript
 function doPost(e) {
   try {
     var doc = SpreadsheetApp.getActiveSpreadsheet();
@@ -83,8 +76,9 @@ function doPost(e) {
       .setMimeType(ContentService.MimeType.JSON);
   }
 }
+
 📁 File Structure
-Plaintext
+
 KiaraEnterprises/
 ├── public/
 │   ├── kiara-logo/           # Brand assets (logo, favicon)
@@ -96,11 +90,9 @@ KiaraEnterprises/
 ├── firebase.json             # Firebase hosting configuration
 ├── LICENSE                   # Proprietary Legal License
 └── README.md                 # Project documentation
+
 ⚖️ License
 © 2026 Dhruv Mandal / Kiara Enterprises. All Rights Reserved.
-
 This repository and its contents are proprietary. No part of this repository may be reproduced, distributed, copied, modified, or transmitted in any form without prior written permission. See the LICENSE file for full details.
+<p align="center">Crafted with 💛 by - <strong>Dhruv Mandal</strong> (O3GenAI IT Solutions)</p>
 
-<div align="center">
-Crafted with 💛 by - <strong>Dhruv Mandal</strong> (O3GenAI IT Solutions)
-</div>
