@@ -88,12 +88,11 @@ KiaraEnterprises/
 ├── firebase.json             # Firebase hosting configuration
 ├── LICENSE                   # Proprietary Legal License
 └── README.md                 # Project documentation
-
 ⚖️ License
 © 2026 Dhruv Mandal / Kiara Enterprises. All Rights Reserved.
 
 This repository and its contents are proprietary. No part of this repository may be reproduced, distributed, copied, modified, or transmitted in any form without prior written permission. See the LICENSE file for full details.
 
 <div align="center">
-<p>Crafted with 💛 by - <strong>Dhruv Mandal (O3GenAI IT Solutions)</strong></p>
+<p>Crafted with 💛 by - <strong>Dhruv Mandal</strong>(O3GenAI IT Solutions)</p>
 </div>
