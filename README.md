@@ -37,14 +37,13 @@ Experience the live production site here: **[kiaraenterprises.com](https://kiara
 
 Because this project relies on Tailwind CSS CDN and Vanilla JavaScript, local development requires no build tools.
 
-1. **Clone the repository:**
-   ```bash
-   git clone [https://github.com/mandaldhruv/Kiara-Enterprises.git](https://github.com/mandaldhruv/Kiara-Enterprises.git)
+**Local Setup:**
+1. Clone the repository: `git clone https://github.com/mandaldhruv/Kiara-Enterprises.git`
 2. Navigate to the `public/` directory and open `index.html` in your browser (or use VS Code Live Server).
+
 **Firebase Deployment:**
 To push updates to the live custom domain, ensure you have the Firebase CLI installed:
-``` firebase deploy --only hosting ```
-
+```firebase deploy --only hosting ```
 ⚙️ Google Sheets Backend Configuration
 The HTML forms use specific name attributes mapped to a Google Apps Script. To recreate the backend, use the following Code.gs structure:
 
@@ -76,8 +75,8 @@ function doPost(e) {
       .setMimeType(ContentService.MimeType.JSON);
   }
 }
-
 📁 File Structure
+Plaintext
 KiaraEnterprises/
 ├── public/
 │   ├── kiara-logo/           # Brand assets (logo, favicon)
@@ -89,12 +88,9 @@ KiaraEnterprises/
 ├── firebase.json             # Firebase hosting configuration
 ├── LICENSE                   # Proprietary Legal License
 └── README.md                 # Project documentation
-
 ⚖️ License
 © 2026 Dhruv Mandal / Kiara Enterprises. All Rights Reserved.
 
 This repository and its contents are proprietary. No part of this repository may be reproduced, distributed, copied, modified, or transmitted in any form without prior written permission. See the LICENSE file for full details.
 
-<div align="center">
-<p>Crafted with 💛 by - <strong>Dhruv Mandal</strong></p>
-</div>
+<p align="center">Crafted with 💛 by - <strong>Dhruv Mandal</strong> (O3GenAI IT Solutions)</p>
