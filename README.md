@@ -1,6 +1,6 @@
 # Kiara Enterprises - Premium Real Estate Portfolio 🏢✨
 
-A modern, high-conversion, single-page website built for **Kiara Enterprises**, a premier real estate agency based in Vasai-Palghar. Designed with a sophisticated "Executive Dark" theme, it caters to high-net-worth individuals, corporate clients, and NRIs seeking residential, commercial, and industrial properties.
+A modern, high-conversion, single-page website built for **Kiara Enterprises**, a premier real estate agency based in Vasai-Palghar, Maharashtra. Designed with a sophisticated "Executive Dark" theme, it caters to high-net-worth individuals, corporate clients, and NRIs seeking residential, commercial, and industrial properties.
 
 ![HTML5](https://img.shields.io/badge/html5-%23E34F26.svg?style=for-the-badge&logo=html5&logoColor=white)
 ![TailwindCSS](https://img.shields.io/badge/tailwindcss-%2338B2AC.svg?style=for-the-badge&logo=tailwind-css&logoColor=white)
@@ -9,22 +9,21 @@ A modern, high-conversion, single-page website built for **Kiara Enterprises**, 
 
 ## 🌟 Key Features
 
-* **Direct Google Sheets Lead Generation:** Both the main contact form and the popup inquiry form submit leads *directly* to a Google Sheet using an AJAX `fetch` API. It features a seamless "Sending..." state and an inline success message without jarring page reloads or alerts.
+* **Direct Google Sheets Lead Generation:** Both the main contact form and the popup inquiry form submit leads *directly* to a Google Sheet using an AJAX `fetch` API. Features a seamless "Sending..." state and a clean, inline green success message without jarring page reloads or browser alerts.
 * **Dynamic Property Filtering:** Users can filter the "Curated Properties" section by categories (All, Apartments, Villas, Commercial) instantly using vanilla JavaScript.
-* **Quick Inquiry Modal:** Clicking "Schedule Visit" or any specific property card opens a centered, blurred-background inquiry modal that automatically captures the property the user clicked on.
-* **Scroll-Spy Navigation:** The fixed navbar automatically highlights the currently viewed section as the user scrolls down the page.
-* **Intersection Observer Animations:** An animated stats counter (`0` to `2021`, `50+`, `500+`) triggers precisely when the user scrolls the "About" section into view.
+* **Quick Inquiry Modal:** Clicking "Schedule Visit" or any specific property card opens a centered, blurred-background inquiry modal that automatically captures the specific property the user is interested in.
+* **Scroll-Spy Navigation:** The fixed dark-glass navbar automatically highlights the currently viewed section as the user scrolls down the page.
+* **Intersection Observer Animations:** An animated stats counter triggers precisely when the user scrolls the "About" section into view.
 * **Floating WhatsApp Integration:** A pulsing WhatsApp Floating Action Button (FAB) that opens the user's app with a pre-filled, URL-encoded inquiry message.
-* **Parallax Hero Section:** Smooth, immersive background scrolling effect on the hero image.
-* **Custom Map Experience:** A sleek, grayscale Google Maps iframe wrapped in an interactive overlay that redirects users to Google Maps for exact directions on click.
-* **Fully Responsive:** Mobile-first design leveraging Tailwind CSS container queries, ensuring perfect scaling from mobile phones to 4K desktops.
+* **Custom Map Experience:** A sleek, grayscale Google Maps iframe wrapped in an interactive overlay that redirects users directly to Google Maps for exact directions on click.
+* **Fully Responsive UI/UX:** Mobile-first design leveraging Tailwind CSS container queries, ensuring perfect scaling and grid adjustments from mobile phones to 4K desktops.
 
 ## 🛠️ Technologies Used
 
 * **HTML5:** Semantic and accessible structure.
 * **Tailwind CSS (via CDN):** Rapid, utility-first styling with a custom configuration inside the `<head>` for specific brand colors (Matte Gold `#eccb13` and Deep Charcoal `#121212`).
-* **Vanilla JavaScript:** Lightweight DOM manipulation for the mobile menu, scroll spy, filtering, modal logic, and AJAX form submissions. No heavy frameworks required.
-* **Google Apps Script:** Acts as the backend API to parse POST requests from the website and append them as rows in a Google Sheet.
+* **Vanilla JavaScript:** Lightweight DOM manipulation for the mobile menu, scroll spy, filtering, modal logic, and AJAX form submissions. No heavy frontend frameworks required.
+* **Google Apps Script:** Acts as the backend API to parse POST requests from the website and append them as new rows in a private Google Sheet.
 * **Google Fonts & Material Symbols:** *Playfair Display* (elegant serif), *Inter* (clean sans-serif), and scalable vector icons.
 
 ## 🚀 Setup & Installation
@@ -36,10 +35,10 @@ Because this project uses the Tailwind CSS CDN and Vanilla JavaScript, there is 
    git clone [https://github.com/mandaldhruv/Kiara-Enterprises.git](https://github.com/mandaldhruv/Kiara-Enterprises.git)
 Open the project folder.
 
-Run the site: Double-click index.html to open it in your default web browser, or use a tool like VS Code Live Server.
+Run the site: Double-click index.html inside the public/ folder to open it in your default web browser, or use a tool like VS Code Live Server for a better development experience.
 
 ⚙️ Google Sheets Backend Configuration
-This website is hardcoded to send leads to a Google Sheet. If you ever need to recreate or modify the backend, here is how the data maps:
+This website is hardcoded to send leads to a Google Sheet. If you need to recreate or modify the backend, here is how the data maps.
 
 The HTML forms use the following name attributes, which must be handled by your Code.gs Google Apps Script:
 
@@ -55,7 +54,7 @@ message (Optional Message)
 
 Inquired_Property (Hidden field capturing the specific property clicked via the modal)
 
-Sample Google Apps Script (Code.gs):
+Required Google Apps Script (Code.gs):
 
 JavaScript
 function doPost(e) {
@@ -71,7 +70,6 @@ function doPost(e) {
     rowData.push(e.parameter.name || "N/A");                      
     rowData.push(e.parameter.phone || "N/A");                     
     rowData.push(e.parameter.message || "N/A");                   
-    rowData.push(e.parameter.Inquired_Property || "General");     
 
     sheet.appendRow(rowData);
     
@@ -87,7 +85,10 @@ function doPost(e) {
 }
 📁 File Structure
 Plaintext
-├── index.html       # Main single-page application (HTML, Tailwind config, JS)
-└── README.md        # Project documentation
-📝 License
-© 2026 Kiara Enterprises. All rights reserved.
+├── public/
+│   ├── index.html            # Main application file
+│   └── kiara-logo/           # Brand assets (logo, favicon)
+└── README.md                 # Project documentation
+<div align="center">
+<p>Crafted with 💛 by - <strong>Dhruv Mandal</strong></p>
+</div>
